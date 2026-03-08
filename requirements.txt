@@ -2,3 +2,6 @@
 # Example:
 # numpy
 # pandas
+ensure
+joblib
+python-box
