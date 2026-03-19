@@ -1,7 +1,7 @@
 # Add project dependencies here
 # Example:
-# numpy
-# pandas
 ensure
 joblib
 python-box
+pandas
+numpy
