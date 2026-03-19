@@ -1,1 +1,90 @@
-# YAML config
+SCHEMA_VERSION: 1.0
+
+COLUMNS:
+  fixed acidity: float64
+  volatile acidity: float64
+  citric acid: float64
+  residual sugar: float64
+  chlorides: float64
+  free sulfur dioxide: float64
+  total sulfur dioxide: float64
+  density: float64
+  pH: float64
+  sulphates: float64
+  alcohol: float64
+  quality: int64
+
+TARGET_COLUMN:
+  name: quality
+
+NUMERICAL_COLUMNS:
+  - fixed acidity
+  - volatile acidity
+  - citric acid
+  - residual sugar
+  - chlorides
+  - free sulfur dioxide
+  - total sulfur dioxide
+  - density
+  - pH
+  - sulphates
+  - alcohol
+
+CATEGORICAL_COLUMNS: []
+
+COLUMN_ORDER:
+  - fixed acidity
+  - volatile acidity
+  - citric acid
+  - residual sugar
+  - chlorides
+  - free sulfur dioxide
+  - total sulfur dioxide
+  - density
+  - pH
+  - sulphates
+  - alcohol
+  - quality
+
+COLUMN_COUNT: 12
+
+REQUIRED_COLUMNS:
+  - fixed acidity
+  - volatile acidity
+  - citric acid
+  - residual sugar
+  - chlorides
+  - free sulfur dioxide
+  - total sulfur dioxide
+  - density
+  - pH
+  - sulphates
+  - alcohol
+  - quality
+
+DATA_VALIDATION_RULES:
+  fixed acidity:
+    min: 0
+  volatile acidity:
+    min: 0
+  citric acid:
+    min: 0
+  residual sugar:
+    min: 0
+  chlorides:
+    min: 0
+  free sulfur dioxide:
+    min: 0
+  total sulfur dioxide:
+    min: 0
+  density:
+    min: 0
+  pH:
+    min: 0
+  sulphates:
+    min: 0
+  alcohol:
+    min: 0
+  quality:
+    min: 0
+    max: 10
