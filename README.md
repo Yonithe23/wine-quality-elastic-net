@@ -1,6 +1,72 @@
 # wine-quality-elastic-net
 Machine learning project predicting wine quality using Elastic Net regression with Python and Scikit-learn.
 
+⚙️ Data Ingestion Workflow  
+The data ingestion process follows a structured pipeline to collect and prepare the dataset before moving to the next ML stage.
+```text
+Read YAML File (config.yaml)
+            ↓
+Load and parse ingestion configurations
+            ↓
+Assign values to Config Entity (DataIngestionConfig)
+            ↓
+Download / access dataset from source
+            ↓
+Extract and store dataset into local artifacts folder
+            ↓
+Generate ingestion status / output dataset path
+```
+## 📄 config.yaml – Data Ingestion Contract
+
+The `config.yaml` file acts as a **configuration contract** for the data ingestion stage.  
+It defines how the dataset is collected, where it is stored, and how it is prepared before entering the ML pipeline.
+
+---
+
+### 🔍 What does `config.yaml` define?
+
+- **Data Source (SOURCE_URL)** → Location of dataset (URL / API / local)
+- **Download Path** → Where raw data is downloaded
+- **Extraction Path** → Where compressed data is extracted
+- **Raw Data Path** → Final usable dataset location
+- **Artifacts Directory** → Organized storage for pipeline outputs
+- **File Handling Rules** → Format (CSV, ZIP, etc.) and extraction behavior
+
+---
+
+### 🧠 Key Idea
+
+"Wrong data source → Wrong results"
+
+This configuration ensures the correct data is collected before processing.
+
+---
+
+## ⚙️ Data Ingestion Tasks Performed
+
+- Download dataset from source  
+- Handle compressed files (ZIP extraction)  
+- Store data in artifacts directory  
+- Organize raw dataset for next stage  
+- Ensure file availability for pipeline  
+
+---
+
+## 🚀 Why This Matters
+
+This ingestion step is important because it:
+
+- Ensures **reproducible data collection**
+- Maintains **consistent data storage structure**
+- Prevents **missing or incorrect data issues**
+- Makes the pipeline **modular and scalable**
+- Enables **production-ready data flow**
+
+---
+
+### 🧠 Key Idea
+
+config.yaml → Config Entity → Ingestion Logic → Raw Data
 
 ## ⚙️ Data Validation Workflow
 
