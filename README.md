@@ -1,7 +1,7 @@
 # wine-quality-elastic-net
 Machine learning project predicting wine quality using Elastic Net regression with Python and Scikit-learn.
 
-⚙️ Data Ingestion Workflow  
+## ⚙️ Data Ingestion Workflow  
 The data ingestion process follows a structured pipeline to collect and prepare the dataset before moving to the next ML stage.
 ```text
 Read YAML File (config.yaml)
